@@ -25,7 +25,7 @@ function Searchpokemon(props) {
   }
 
   return (
-    <form style={{ marginTop: "500px"}} onSubmit={handleSubmit}>
+    <form style={{ marginTop: "50px"}} onSubmit={handleSubmit}>
         <label>
           Pokemon to get:
           <input type="text" value={inputPokemon} onChange={(e) => handleInput(e)} />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Searchpokemon from "./compoents/searchpokemon";
-import Pokelist from "./compoents/pokelist";
+import Searchpokemon from "./components/searchpokemon";
+import Pokelist from "./components/pokelist";
 import './App.css';
 
 function App() {
