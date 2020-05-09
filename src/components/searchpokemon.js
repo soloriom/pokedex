@@ -13,7 +13,7 @@ function Searchpokemon(props) {
   
   const handleSubmit = async (event) => {
     event.preventDefault();
-      let url = `https://pokeapi.co/api/v2/pokemon/${inputPokemon}/`;
+      let url = `https://pokeapi.co/api/v2/pokemon/${inputPokemon.toLowerCase()}/`;
       try {
         const pokemonRetrieve = await axios(url);
         props.handlePokemonData(pokemonRetrieve.data);
