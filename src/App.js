@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Searchpokemon from "./compoents/searchpokemon";
+import Pokelist from "./compoents/pokelist";
 import './App.css';
 
 function App() {
+  let [pokemonData, setPokemonData] = useState({});
+  
+  const handleSetPokemondata = (data) =>  {
+    const pokeName = data.name;
+    const pokeArranged = {
+      name: pokeName, 
+      id:data.id,
+      img: data.sprites.front_default
+    };
+    if (pokemonData[pokeName] === undefined) {
+      
+      setPokemonData({...pokemonData, [pokeName]: pokeArranged});
+    } else {
+      alert("Pokemon Already fetched")
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Searchpokemon handlePokemonData={handleSetPokemondata} />
+      <Pokelist pokemons={pokemonData}/>
     </div>
   );
 }
