@@ -20,15 +20,15 @@ function Searchpokemon(props) {
         setInputPokemon("");
       } catch (error) {
         setInputPokemon("");
-        alert("Pokemon does not exist")
+        alert(`${inputPokemon} does not exist`)
       }
   }
 
   return (
     <form style={{ marginTop: "50px"}} onSubmit={handleSubmit}>
         <label>
-          Pokemon to get:
-          <input type="text" value={inputPokemon} onChange={(e) => handleInput(e)} />
+          Pokemon to get: 
+          <input style={{marginLeft: "10px"}} type="text" value={inputPokemon} onChange={(e) => handleInput(e)} />
         </label>
         <input type="submit" value="Submit" />
     </form>

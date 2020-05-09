@@ -16,7 +16,7 @@ function App() {
     if (pokemonData[pokeName] === undefined) {
       setPokemonData({...pokemonData, [pokeName]: pokeArranged});
     } else {
-      alert("Pokemon Already fetched")
+      alert(`Pokemon ${pokeName} is already fetched`);
     }
   }
 
