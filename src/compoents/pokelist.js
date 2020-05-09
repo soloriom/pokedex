@@ -2,12 +2,8 @@ import React from 'react';
 
 
 function Pokelist({pokemons}) {
-  console.log("props", pokemons)
-  
   let list = [];
-  
   for (const pokemon in pokemons) {
-    console.log("pokemon inside", pokemon)
     list.push(
       <React.Fragment  key={pokemon} >
         <img src={pokemons[pokemon].img} alt={pokemon}></img>

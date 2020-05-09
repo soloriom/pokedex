@@ -14,7 +14,6 @@ function App() {
       img: data.sprites.front_default
     };
     if (pokemonData[pokeName] === undefined) {
-      
       setPokemonData({...pokemonData, [pokeName]: pokeArranged});
     } else {
       alert("Pokemon Already fetched")
@@ -23,7 +22,6 @@ function App() {
 
   return (
     <div className="App">
-
       <Searchpokemon handlePokemonData={handleSetPokemondata} />
       <Pokelist pokemons={pokemonData}/>
     </div>
